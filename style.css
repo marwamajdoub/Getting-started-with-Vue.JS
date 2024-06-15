@@ -1,0 +1,13 @@
+.box{
+    background-color:purple;
+    height:200px;
+    width:200px;
+
+}
+.box.two{
+    background-color: red;
+
+}
+.box.three{
+    background-color:green;
+}
