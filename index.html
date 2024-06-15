@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn vue</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app" >
+            {{greeting}}
+            <input @keyup.enter="greet" v-model="greeting" />
+
+            <div v-if="isVisible" class="box"></div>
+            <button @click="toggleBox">Toggle Box</button> 
+
+            <button v-on:click="isVisible=false">hide the box</button> 
+
+
+            
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+        <script>
+           let app= Vue.createApp({
+            data: function(){
+                return{
+                    greeting:'Hello vue 3',
+                    isVisible: false
+                }
+            },
+            methods: {
+                toggleBox(){
+                    this.isVisible=!this.isVisible;
+                },
+                greet(){
+                    console.log(this.greeting);
+                }
+                
+            }
+           }) 
+           app.mount('#app')
+        </script>
+    </body>
+    
+
+
+</html>
