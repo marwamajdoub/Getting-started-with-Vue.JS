@@ -16,12 +16,29 @@
             <div class ="product-container">
              <div class="product-image"  >
               <img  v-bind:src="image">
+              <div 
+             v-for="variant in variants" 
+             :key="variant.id" 
+             @mouseover="updateImage(variant.image)"
+             class="color-circle"
+             :style="{backgroundColor:variant.color}"
+             >{{variant.color}}</div>
+
              </div> 
+            
              <div class="product-info">
                 <h1>{{product}}</h1>
+                <div class="cart"> cart ({{cart}})</div>
                 <p v-if="inventory >10">inStock</p>
                 <p v-else="inventory<10">Out of stock</p>
+                <ul>
+                    <li v-for="details in details">{{ details}}</li>
+
+                </ul>
+               
+                <button class="name" v-on:click="addTocart"> add cart</button>
              </div>
+
             </div>
         </div>
      </div>
@@ -30,14 +47,6 @@
         const mountedApp=app.mount('#app')
      </script>
    </body>
-
-
-
-
-
-
-
-
 
 
 
