@@ -42,12 +42,7 @@ app.component('product-display',{
                 id:2234,color:'blue',image:'t_shirt.jpg'},
                 {id:2235,color:'black',image:'black.jpg'
             },]
-         
             
-    
-            
-    
-           
         }
     
     },
@@ -60,7 +55,6 @@ app.component('product-display',{
             this.image=variantImage;
     
         }
-    
-    
+        
     }
     })
