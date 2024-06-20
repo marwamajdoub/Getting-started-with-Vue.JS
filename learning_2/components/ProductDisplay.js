@@ -54,7 +54,6 @@ app.component('product-display',{
         updateImage(variantImage){
             this.image=variantImage;
     
-        }
-        
+        }  
     }
     })
